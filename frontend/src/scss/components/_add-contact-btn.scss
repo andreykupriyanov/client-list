@@ -1,0 +1,46 @@
+.add-contact-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: calc(-13.33px - 5.33px);
+    display: flex;
+    width: 13.33px;
+    height: 13.33px;
+    background: url("../../img/icon-plus.svg") center / cover no-repeat;
+    transition: background 0.3s ease-in-out;
+  }
+
+  &__txt {
+    display: flex;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-mine-shaft);
+    transition: color 0.3s ease-in-out;
+  }
+
+  &:hover {
+    &::before {
+      color: var(--color-white);
+      background-color: var(--color-heliotrope);
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+
+    &::after {
+      background: url("../../img/icon-plus-hover.svg") center / cover no-repeat;
+      transition: background 0.3s ease-in-out;
+    }
+
+    .add-contact-btn__icon {
+      color: var(--color-athens-gray);
+    }
+
+    .add-contact-btn__txt {
+      color: var(--color-heliotrope);
+      transition: color 0.3s ease-in-out;
+    }
+  }
+}

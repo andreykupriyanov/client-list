@@ -1,0 +1,105 @@
+.form-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 25px;
+  padding: 25px 0;
+  width: 100%;
+  background-color: var(--color-athens-gray);
+
+  &__container {
+    @include flex-h-center;
+    flex-wrap: wrap;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    width: 100%;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 37px;
+
+      &:last-child {
+        margin-bottom: 25px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      &__input {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        border: 1px solid var(--color-gray-suit);
+        padding-left: 12px;
+        width: calc(100% - 123px);
+        height: 100%;
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--color-mine-shaft);
+        background-color: transparent;
+
+        &.validate-error {
+          border: 1px solid var(--color-burnt-sienna);
+        };
+
+        &.with-delete-btn {
+          border-right: 0;
+          width: calc(100% - 123px - 27px);
+        }
+
+        &::placeholder {
+          font-size: 14px;
+          color: var(--color-silver-chalice);
+        }
+      }
+
+      &__delete-btn-wrapper {
+        position: relative;
+        height: 100%;
+
+        &:hover .tooltip {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+
+      &__delete-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        border: 1px solid var(--color-gray-suit);
+        width: 27px;
+        height: 100%;
+        background-color: var(--color-mischka);
+        transition: border-color 0.3s ease-in-out;
+
+        svg {
+          width: 12px;
+          height: 12px;
+          fill: var(--color-gray-suit);
+          transition: fill 0.3s ease-in-out;
+        }
+
+        &:hover {
+          border-color: var(--color-burnt-sienna);
+          border-left: 1px solid var(--color-burnt-sienna);
+          transition: border-color 0.3s ease-in-out;
+
+          svg {
+            fill: var(--color-burnt-sienna);
+            transition: fill 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+}

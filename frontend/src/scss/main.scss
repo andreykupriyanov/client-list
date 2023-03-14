@@ -1,0 +1,28 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения больших компонентов страницы
+@import "./components/header";
+@import "./components/crm";
+@import "./components/crm-table";
+@import "./components/modal";
+@import "./components/form";
+
+// подключения маленьких компонентов страницы
+@import "./components/column-title";
+@import "./components/client";
+@import "./components/sorting-item";
+@import "./components/contacts";
+@import "./components/tooltip";
+@import "./components/add-client-btn";
+@import "./components/disable-scroll";
+@import "./components/form-item";
+@import "./components/form-contact";
+@import "./components/add-contact-btn";
+@import "./components/delete-client-modal";
+@import "./components/select";
+@import "./components/animation";
+@import "./components/search-results";

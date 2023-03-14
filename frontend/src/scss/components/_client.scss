@@ -1,0 +1,85 @@
+.client {
+  height: 60px;
+  background-color: var(--color-white);
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--color-black);
+
+  td {
+    padding-left: 20px;
+    vertical-align: center;
+  }
+
+  &__id {
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--color-silver-chalice);
+  }
+
+  &__name {
+    a {
+      color: var(--color-mine-shaft);
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--color-heliotrope);
+        transition: color 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &-actions {
+    &__link {
+      position: relative;
+      display: inline-block;
+      padding-left: 15px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 12px;
+        height: 12px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.6;
+        transform: translateY(-50%);
+      }
+
+      &--change {
+        margin-right: 40px;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: var(--color-heliotrope);
+          transition: color 0.3s ease-in-out;
+        }
+
+        &:before {
+          background-image: url("../img/icon-pencil.svg");
+        }
+      }
+
+      &--delete {
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: var(--color-burnt-sienna);
+          transition: color 0.3s ease-in-out;
+        }
+
+        &:before {
+          background-image: url("../img/icon-delete.svg");
+        }
+      }
+    }
+  }
+
+  &-date {
+    &__time {
+      color: var(--color-silver-chalice);
+    }
+  }
+}

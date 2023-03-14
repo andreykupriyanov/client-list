@@ -1,0 +1,117 @@
+.modal-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation-name: open-modal-overlay;
+  animation-duration: 0.5s;
+
+  &--close {
+    animation-name: close-modal-overlay;
+    animation-duration: 1s;
+  }
+}
+
+.modal {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 30px 0;
+  width: 400px;
+  box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.15);
+  background-color: var(--color-white);
+  animation-name: open-modal-element;
+  animation-duration: 1s;
+
+  &--close {
+    animation-name: close-modal-element;
+    animation-duration: 1s;
+  }
+
+  &-main-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 147px;
+    height: 44px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: var(--color-white);
+    background-color: var(--color-heliotrope);
+  }
+
+  &-minor-btn {
+    display: inline-flex;
+    width: 99px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 12px;
+    text-decoration: underline;
+    color: var(--color-mine-shaft);
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--color-burnt-sienna);
+      transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    }
+  }
+
+  &-close-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--color-silver-chalice);
+      transition: fill 0.3s ease-in-out;
+
+      &:hover {
+        fill: var(--color-heliotrope);
+        transition: fill 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-right: 9px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1;
+    color: var(--color-mine-shaft);
+  }
+
+  &__id {
+    font-size: 12px;
+    line-height: 1;
+    color: var(--color-silver-chalice);
+  }
+
+  &__form {
+    width: 100%;
+  }
+}

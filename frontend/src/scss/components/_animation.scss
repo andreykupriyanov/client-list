@@ -1,0 +1,40 @@
+@keyframes open-modal-element {
+  from {
+    opacity: 0.5;
+    transform: translateY(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes close-modal-element {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+  to {
+    opacity: 0.5;
+    transform: translateY(-20%);
+  }
+}
+
+@keyframes open-modal-overlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes close-modal-overlay {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

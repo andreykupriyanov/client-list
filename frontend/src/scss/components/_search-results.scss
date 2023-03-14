@@ -1,0 +1,30 @@
+.search-results {
+  z-index: 100000;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+
+  &__list {
+    padding: 4px;
+    background-color: var(--color-wild-sand);
+  }
+
+  &__item {
+    display: flex;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 600;
+    color: var(--color-black);
+    cursor: pointer;
+
+    &:hover {
+      background-color: var(--color-grey-suit);
+    }
+  }
+
+  &__id {
+    margin-right: 10px;
+  }
+}

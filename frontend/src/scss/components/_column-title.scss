@@ -1,0 +1,14 @@
+.column-title {
+  padding-left: 20px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-silver-chalice);
+  text-align: left;
+
+  &-btn {
+    &__secondary-text {
+      font-size: 10px;
+    }
+  }
+}

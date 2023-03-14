@@ -1,0 +1,33 @@
+.tooltip {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  display: flex;
+  flex-shrink: initial;
+  background-color: var(--color-mine-shaft);
+  padding: 10px;
+  white-space: nowrap;
+  color: var(--color-white);
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+
+  &__span {
+    &:not(:last-child) {
+      margin-right: 5px;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 5.5px 0 5.5px;
+    border-color: var(--color-mine-shaft) transparent transparent transparent;
+    transform: translateX(-50%);
+  }
+}
